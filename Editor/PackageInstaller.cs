@@ -5,7 +5,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 
 namespace CJM.YOLOXUtils
 {
@@ -27,6 +26,8 @@ namespace CJM.YOLOXUtils
         private static AddRequest addRequest;
         private static List<PackageData> packagesToInstall;
         private static int currentPackageIndex;
+
+        private const string PackagesJSONGUID = "487301ab13cf457b9c2ed07a3ec5c004";
 
         [InitializeOnLoadMethod]
         public static void InstallDependencies()
@@ -93,10 +94,8 @@ namespace CJM.YOLOXUtils
 
         private static PackageList ReadPackageJson()
         {
-            string assemblyPath = Assembly.GetExecutingAssembly().Location;
-            string scriptFolderPath = Path.GetDirectoryName(assemblyPath);
-            string jsonPath = Path.Combine(scriptFolderPath, "packages.json");
-            string jsonString = File.ReadAllText(jsonPath);
+            string assetPath = AssetDatabase.GUIDToAssetPath(PackagesJSONGUID);
+            string jsonString = File.ReadAllText(assetPath);
             return JsonUtility.FromJson<PackageList>(jsonString);
         }
 
