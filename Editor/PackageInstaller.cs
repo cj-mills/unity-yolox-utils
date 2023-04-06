@@ -92,13 +92,14 @@ namespace CJM.YOLOXUtils
 
         private static PackageList ReadPackageJson()
         {
-            MonoScript packageInstallerScript = MonoScript.FromScriptableObject(new ScriptableObject());
+            MonoScript packageInstallerScript = MonoScript.FromMonoBehaviour(new PackageInstaller());
             string scriptPath = AssetDatabase.GetAssetPath(packageInstallerScript);
             string scriptFolderPath = Path.GetDirectoryName(scriptPath);
             string jsonPath = Path.Combine(scriptFolderPath, "packages.json");
             string jsonString = File.ReadAllText(jsonPath);
             return JsonUtility.FromJson<PackageList>(jsonString);
         }
+
 
     }
 }
