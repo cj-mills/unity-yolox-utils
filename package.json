@@ -1,0 +1,18 @@
+{
+    "name": "com.cj-mills.unity-yolox-utils",
+    "displayName": "YOLOX Utilities",
+    "version": "1.0.0",
+    "unity": "2020.3",
+    "description": "This package provides utility functions to work with YOLOX object detection models. It helps in generating grid coordinates with strides, and extracting bounding box proposals from the model output.",
+    "keywords": [],
+    "author": {
+        "name": "Christian Mills",
+        "email": "christian@christianjmills.com",
+        "url": "https://christianjmills.com/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cj-mills/unity-yolox-utils.git"
+    },
+    "license": "MIT"
+}
