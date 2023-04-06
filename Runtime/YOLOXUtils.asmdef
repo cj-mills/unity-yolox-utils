@@ -1,0 +1,16 @@
+{
+  "name": "CJM.YOLOXUtils",
+  "references": [
+        "CJM.BBox2DToolkit"
+  ],
+  "optionalUnityReferences": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
