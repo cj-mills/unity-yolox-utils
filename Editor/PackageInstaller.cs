@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace CJM.YOLOXUtils
 {
@@ -92,9 +93,8 @@ namespace CJM.YOLOXUtils
 
         private static PackageList ReadPackageJson()
         {
-            MonoScript packageInstallerScript = MonoScript.FromMonoBehaviour(new PackageInstaller());
-            string scriptPath = AssetDatabase.GetAssetPath(packageInstallerScript);
-            string scriptFolderPath = Path.GetDirectoryName(scriptPath);
+            string assemblyPath = Assembly.GetExecutingAssembly().Location;
+            string scriptFolderPath = Path.GetDirectoryName(assemblyPath);
             string jsonPath = Path.Combine(scriptFolderPath, "packages.json");
             string jsonString = File.ReadAllText(jsonPath);
             return JsonUtility.FromJson<PackageList>(jsonString);
