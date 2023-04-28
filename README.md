@@ -14,6 +14,14 @@ This Unity package provides utility functions to work with YOLOX object detectio
 
 
 
+## Demo Projects
+
+| GitHub Repository                                            | Description                                                |
+| ------------------------------------------------------------ | ---------------------------------------------------------- |
+| [barracuda-inference-yolox-demo](https://github.com/cj-mills/barracuda-inference-yolox-demo) | Perform object detection using YOLOX models.               |
+
+
+
 ## Getting Started
 
 ### Prerequisites
