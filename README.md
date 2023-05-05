@@ -22,6 +22,12 @@ This Unity package provides utility functions to work with YOLOX object detectio
 
 
 
+## Code Walkthrough
+
+* [Code Walkthrough: Unity YOLOX Utilities Package](https://christianjmills.com/posts/unity-yolox-utils-walkthrough/)
+
+
+
 ## Getting Started
 
 ### Prerequisites
