@@ -37,6 +37,19 @@ namespace CJM.YOLOXUtils
     /// </summary>
     public static class YOLOXUtility
     {
+
+        /// <summary>
+        /// Crop input dimensions to be divisible by the maximum stride.
+        /// </summary>
+        public static Vector2Int CropInputDims(Vector2Int inputDims)
+        {
+            inputDims[0] -= inputDims[0] % YOLOXConstants.Strides.Max();
+            inputDims[1] -= inputDims[1] % YOLOXConstants.Strides.Max();
+
+            return inputDims;
+        }
+
+
         /// <summary>
         /// Generates a list of GridCoordinateAndStride objects based on input strides, height, and width.
         /// </summary>
