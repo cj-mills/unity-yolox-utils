@@ -119,7 +119,7 @@ namespace CJM.YOLOXUtils
         }
 
 
-        public static BBox2DInfo[] GetBBox2DInfos(List<BBox2D> proposals, int[] proposalIndices, List<(string, Color)> colormapList)
+        public static BBox2DInfo[] GetBBox2DInfos(List<BBox2D> proposals, List<int> proposalIndices, List<(string, Color)> colormapList)
         {
             return proposalIndices
                 .Select(index => proposals[index])
